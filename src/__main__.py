@@ -7,7 +7,7 @@ from asyncio import run
 
 async def main():
     config = Config(load("config.toml"))
-    logger = set_logger("GiftFlashBuyer", log_path=config.logs_file_path, debug_disabled=True)  # Если хотите выключить необъязательные логи, удалите строку debug_disabled
+    logger = set_logger("GiftFlashBuyer", log_path=config.logs_file_path, debug_disabled=True)  # Если хотите включить необъязательные логи, удалите строку debug_disabled
 
     sessions = Sessions(config, logger)
     gift_cache = GiftsCache(config)
