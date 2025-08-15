@@ -6,8 +6,8 @@
 
 Скрипт автоматизирует покупку лимитированных подарков в Telegram, используя несколько аккаунтов. Покупка начинается с самых редких подарков и продолжается до исчерпания баланса или доступности. Редкие подарки раскупаются ботами за секунды, с этим ботом ты тоже сможешь войти в число счастливчиков.
 <p align="center">
-  <img src="img/img.png" height="300"/>
-  <img src="img/img_2.png" height="300"/>
+  <img src=".github/docs/img.png" height="300"/>
+  <img src=".github/docs/img_2.png" height="300"/>
 </p>
 
 ## ✨ Особенности
@@ -21,7 +21,7 @@
 
 ## 🚀 Быстрый старт
 
-[![Watch the video](img/video_preview.png)](https://jumpshare.com/share/mZjWsteHbpyHzdc9Rk4A)
+[![Watch the video](.github/docs/video_preview.png)](https://jumpshare.com/share/mZjWsteHbpyHzdc9Rk4A)
 
 **0. Склонируйте репозиторий**
 
@@ -33,11 +33,11 @@ cd GiftFlashBuyer
 ```
 Либо загрузите вручную и распакуйте архив
 
-![img.png](img/save_zip.png)
+![img.png](.github/docs/save_zip.png)
 
 Распакованный архив должен выглядеть следующим образом
 
-![img.png](img/dir_with_gift_buyer.png)
+![img.png](.github/docs/dir_with_gift_buyer.png)
 
 **1. Установите Python, если он не установлен**
 
@@ -47,7 +47,7 @@ cd GiftFlashBuyer
 
 Откройте командную строку
 
-![img.png](img/open_cmd.png)
+![img.png](.github/docs/open_cmd.png)
 
 Перейдите в директорию с распакованным архивом и введите команду для установки зависимостей
 
@@ -56,31 +56,31 @@ cd GiftFlashBuyer
 pip install -r requirements.txt
 ```
 
-![img.png](img/cmd_pip.png)
+![img.png](.github/docs/cmd_pip.png)
 
 **2. Создайте сессии для ваших аккаунтов:**
 - В файле `session_create.py` впишите имя сессии для аккаунта (например, `name_session = "account1"`)
 
-![img.png](img/session_create_file.png)
+![img.png](.github/docs/session_create_file.png)
 
 - Запустите `python.exe ./session_create.py`
 
-![img.png](img/session_create.png)
+![img.png](.github/docs/session_create.png)
 
 - Авторизуйтесь по номеру телефона
 
-![img.png](img/login.png)
+![img.png](.github/docs/login.png)
 
 - Повторите для всех используемых аккаунтов (с разными именами сессий в файле session_create.py)
 
 Таким образом создадутся файлы сессий `.session` локально, которые далее будут использоваться скриптом покупки
 
-![img.png](img/created_session.png)
+![img.png](.github/docs/created_session.png)
 
 **3. Настройте скрипт:**
 - Откройте `config.toml`
 
-![img.png](img/config_toml.png)
+![img.png](.github/docs/config_toml.png)
 
 - Укажите имена сессий для проверки новых подарков, например
 ```toml
@@ -122,7 +122,7 @@ price_range = ["0", "inf"]      # Диапозон цены:    [От, До]
 python.exe ./main.py
 ```
 
-![img.png](img/run_main.png)
+![img.png](.github/docs/run_main.png)
 
 ## 📝 Примечания
 
