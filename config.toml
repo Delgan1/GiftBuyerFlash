@@ -1,3 +1,6 @@
+# Путь до логов 
+logs_file_path = "logs.log"
+
 # Аккаунты для проверки выхода новых подарков
 sessions_for_checking = ["account1"]
 

@@ -1,4 +1,5 @@
-import asyncio
+from asyncio import gather, wait, create_task, CancelledError
+
 from typing import List, Any
 
 
@@ -17,11 +18,11 @@ class TaskManager:
         ])
         """
         self._stop_flag = False
-        self._tasks = [asyncio.create_task(self._wrap_task(coro)) for coro in coroutines]
+        self._tasks = [create_task(self._wrap_task(coro)) for coro in coroutines]
 
         try:
-            await asyncio.gather(*self._tasks, return_exceptions=True)
-        except asyncio.CancelledError:
+            await gather(*self._tasks, return_exceptions=True)
+        except CancelledError:
             await self._cancel_all()
 
     async def _wrap_task(self, coro):
@@ -43,4 +44,4 @@ class TaskManager:
             if not task.done():
                 task.cancel()
         # Убрали return_exceptions, так как wait() его не поддерживает
-        await asyncio.wait(self._tasks)
+        await wait(self._tasks)

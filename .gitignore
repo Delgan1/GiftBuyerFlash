@@ -1,0 +1,24 @@
+# Python Cache
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Venv
+venv/
+.env/
+.venv/
+env/
+
+# Logs and temp files
+*.log
+*.tmp
+*.temp
+
+# IDE settings
+.vscode/
+.idea/
+
+# Pyrogram
+*.session
+*.session-journal
